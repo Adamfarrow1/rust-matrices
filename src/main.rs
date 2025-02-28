@@ -19,7 +19,6 @@ impl Matrix{
     fn add(&self, m2 : &Self) -> Self {
         let mut res = Matrix::zeros(self.rows , self.cols);
 
-
         for i in 0..self.rows{
             for j in 0..self.cols{
                 res.data[i][j] += self.data[i][j] + m2.data[i][j];
@@ -42,8 +41,13 @@ impl Matrix{
             println!("{:?}", row);
         }
     }
+
 }
+
+
+
 fn main() {
+    
     let a = Matrix::new(2, 2, vec![vec![1.0, 2.0], vec![3.0, 4.0]]);
     let b = Matrix::new(2, 2, vec![vec![5.0, 6.0], vec![7.0, 8.0]]);
     
